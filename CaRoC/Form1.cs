@@ -22,7 +22,7 @@ namespace CaRoC
         
         bool Nhacplay = true; //Khởi tạo trạng thái phát nhạc - mặc định phát khi khởi động      
         private HinhGif gifImage = null;
-        private string filePath = @"C:\Users\My-PC\CaRoC1.2\CaRoC\Resources\banana.gif";
+        private string filePath = @"C:\Users\LUONGYANG\CaRoC1.2\CaRoC\Resources\banana.gif";
 
         public frmCaro()
         {
@@ -177,6 +177,18 @@ namespace CaRoC
         private void prcbCoolDown_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ngườiNgườiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grs.Clear(pnBanCo.BackColor);
+            caroChess.Nguoi_va_Nguoi(grs);
+        }
+
+        private void ngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grs.Clear(pnBanCo.BackColor);//Xóa trống bàn cờ - trước khi bắt đầu chơi
+            caroChess.BatDau(grs);//Bắt đầu chơi
         }
     }
 }
